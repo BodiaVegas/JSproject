@@ -61,11 +61,17 @@ let a = 100; console.log(typeof a);
 let b = '100'; console.log(typeof b);
 let c = true; console.log(c);
 
-let name = prompt ('enter your name, please');
+let name1 = prompt ('enter your name, please');
 let middlename = prompt ('enter your middle name, please')
 let surname = prompt('enter your surname please');
-let result = name +' '+middlename+' '+surname
+let age1 = prompt ('enter your age, please')
+if (!!!age1) {
+    prompt ('I said, enter your name bl...!!!')
+}
+let result = name1 +' '+middlename+' '+surname+','+ ' '+(parseInt(age1))+ ' '+'years'
+let res1=+age1
 console.log(result);
+console.log(res1)
 
 
 
