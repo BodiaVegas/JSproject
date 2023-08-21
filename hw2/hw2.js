@@ -75,5 +75,83 @@ console.log(users[6].password)
 console.log(users[7].password)
 console.log(users[8].password)
 console.log(users[9].password)
+// Є змінна х, якій ви надаєте довільне числове значення.
+//     Якщо змінна x не дорівнює нулю, виведіть 'Вірно', інакше виведіть 'Невірно'. Перевірте  скрипт при a, що дорівнює 1, 0, -3
+// - Дано змінну time яка рівна числу від 0 до 59. Потрібно написати код, який перевірить, до якої четверті години попадає число
+// (в першу, другу, третю или четверту частину години).
+// - У змінній day дано якесь число від 1 до 31. Потрібно визначити, у яку половину(декаду) місяця потрапляє це число (у першу, другу чи третю).
+// - Скласти розклад на тиждень за домопоги switch. Користувач вводить порядковий номер дня тижня і на екрані відображається інфа що заплановано на цей день (можна замість плану на день, назву дня англійською).
+//     - Користувач вводить або має два числа.
+//         Потрібно знайти та вивести максимальне число з тих двох .
+//         Також потрібно врахувати коли введені рівні числа.
 
+// let x = +prompt ('enter the number');
+// if (x===0) {
+//     console.log('Wrong')
+// }
+// else {
+//     console.log('Right')
+// }
+//
+// let time = +prompt ('enter the time');
+// if (time>0 && time<=15) {
+//     console.log('first');
+// } else if (time>15 && time<=30) {
+//     console.log('second')
+// } else if (time>30 && time<=45) {
+//     console.log('third')
+// } else if (time>45 && time<=60){
+//     console.log('fourth');
+// } else {
+//     console.log('???????????????')
+// }
+//
+// let day = +prompt ('enter the day number');
+// if (day>0 && day<=10) {
+//     console.log('first');
+// } else if (day>10 && day<=20) {
+//     console.log('second')
+// } else if (day>20 && time<=30) {
+//     console.log('third')
+// }  else {
+//     console.log('???????????????')
+// }
+//
+// let schedule = prompt ('enter the day of the week')
+//
+// switch (schedule) {
+//     case 'monday': console.log('schedule for monday');
+//     break;
+//     case 'tuesday': console.log('schedule for Tuesday');
+//     break;
+//     case 'wednesday': console.log('schedule for Wednesday');
+//     break;
+//     case 'thursday': console.log('schedule for Thursday');
+//     break;
+//     case 'friday': console.log('schedule for Friday');
+//     break;
+//     case 'saturday': console.log('schedule for Saturday');
+//     break;
+//     case 'sunday': console.log('schedule for Sunday');
+//     break;
+//     default: console.log('?????????????????');
+//     break;
+// }
+//
+// let a=200;
+// let b= 285;
+// if (a>b) {
+//     console.log(a)
+// } else if (a<b) {
+//     console.log(b)
+// } else {console.log(a,b)}
 
+// - є змінна х, яка може прийняти будь-яке значення (стрінг, число, undefined, null  і тд включно). Напишіть код який,
+//     за допомоги  оператора || буде присвоювати змінній х значення "default"  якщо значення змінної х являється falsy (хибноподібні, тобто приводиться до
+
+let xx= [""];
+if (xx==false) {
+    console.log('default');
+} else {
+    console.log('true')
+}
