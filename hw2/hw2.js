@@ -85,66 +85,66 @@ console.log(users[9].password)
 //         Потрібно знайти та вивести максимальне число з тих двох .
 //         Також потрібно врахувати коли введені рівні числа.
 
-// let x = +prompt ('enter the number');
-// if (x===0) {
-//     console.log('Wrong')
-// }
-// else {
-//     console.log('Right')
-// }
-//
-// let time = +prompt ('enter the time');
-// if (time>0 && time<=15) {
-//     console.log('first');
-// } else if (time>15 && time<=30) {
-//     console.log('second')
-// } else if (time>30 && time<=45) {
-//     console.log('third')
-// } else if (time>45 && time<=60){
-//     console.log('fourth');
-// } else {
-//     console.log('???????????????')
-// }
-//
-// let day = +prompt ('enter the day number');
-// if (day>0 && day<=10) {
-//     console.log('first');
-// } else if (day>10 && day<=20) {
-//     console.log('second')
-// } else if (day>20 && time<=30) {
-//     console.log('third')
-// }  else {
-//     console.log('???????????????')
-// }
-//
-// let schedule = prompt ('enter the day of the week')
-//
-// switch (schedule) {
-//     case 'monday': console.log('schedule for monday');
-//     break;
-//     case 'tuesday': console.log('schedule for Tuesday');
-//     break;
-//     case 'wednesday': console.log('schedule for Wednesday');
-//     break;
-//     case 'thursday': console.log('schedule for Thursday');
-//     break;
-//     case 'friday': console.log('schedule for Friday');
-//     break;
-//     case 'saturday': console.log('schedule for Saturday');
-//     break;
-//     case 'sunday': console.log('schedule for Sunday');
-//     break;
-//     default: console.log('?????????????????');
-//     break;
-// }
-//
-// let a=200;
-// let b= 285;
-// if (a>b) {
-//     console.log(a)
-// } else if (a<b) {
-//     console.log(b)
-// } else {console.log(a,b)}
+let x = +prompt ('enter the number');
+if (x===0) {
+    console.log('Wrong')
+}
+else {
+    console.log('Right')
+}
+
+let time = +prompt ('enter the time');
+if (time>0 && time<=15) {
+    console.log('first');
+} else if (time>15 && time<=30) {
+    console.log('second')
+} else if (time>30 && time<=45) {
+    console.log('third')
+} else if (time>45 && time<=60){
+    console.log('fourth');
+} else {
+    console.log('???????????????')
+}
+
+let day = +prompt ('enter the day number');
+if (day>0 && day<=10) {
+    console.log('first');
+} else if (day>10 && day<=20) {
+    console.log('second')
+} else if (day>20 && time<=30) {
+    console.log('third')
+}  else {
+    console.log('???????????????')
+}
+
+let schedule = prompt ('enter the day of the week')
+
+switch (schedule) {
+    case 'monday': console.log('schedule for monday');
+    break;
+    case 'tuesday': console.log('schedule for Tuesday');
+    break;
+    case 'wednesday': console.log('schedule for Wednesday');
+    break;
+    case 'thursday': console.log('schedule for Thursday');
+    break;
+    case 'friday': console.log('schedule for Friday');
+    break;
+    case 'saturday': console.log('schedule for Saturday');
+    break;
+    case 'sunday': console.log('schedule for Sunday');
+    break;
+    default: console.log('?????????????????');
+    break;
+}
+
+let a=200;
+let b= 285;
+if (a>b) {
+    console.log(a)
+} else if (a<b) {
+    console.log(b)
+} else {console.log(a,b)}
 
 // - є змінна х, яка може прийняти будь-яке значення (стрінг, число, undefined, null  і тд включно). Напишіть код який,
 //     за допомоги  оператора || буде присвоювати змінній х значення "default"  якщо значення змінної х являється falsy (хибноподібні, тобто приводиться до
