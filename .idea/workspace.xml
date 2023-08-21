@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="585cc282-0bfb-4937-8a54-9dad9df45a0a" name="Changes" comment="hw 2 added 2,3 tasks">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/hw2/hw2.js" beforeDir="false" afterPath="$PROJECT_DIR$/hw2/hw2.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -64,7 +63,7 @@
       <workItem from="1692179611753" duration="1077000" />
       <workItem from="1692185710517" duration="8486000" />
       <workItem from="1692205502552" duration="1131000" />
-      <workItem from="1692619667581" duration="9580000" />
+      <workItem from="1692619667581" duration="10458000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1692132910528</created>
@@ -122,7 +121,14 @@
       <option name="project" value="LOCAL" />
       <updated>1692629621443</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="hw 2 added 2,3 tasks">
+      <created>1692629883313</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1692629883313</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
