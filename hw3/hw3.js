@@ -76,7 +76,7 @@ for (const product of products) {
     for (const productKey in product) {
         if (productKey==='title') { document.write(`<div class="product-card"><h3>${productKey} : ${product[productKey]}</h3></div>`)};
         if (productKey==='price') {document.write(`<div class="product-card"><h3>${productKey} : ${product[productKey]}</h3></div>`)};
-        if (productKey==='image')   {document.write(`<img src="${product[productKey]}"></img>`)};
+        if (productKey==='image')   {document.write(`<img src="${product[productKey]}">`)};
     }}
 
 let users = [
