@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="585cc282-0bfb-4937-8a54-9dad9df45a0a" name="Changes" comment="hw 3 added">
-      <change beforePath="$PROJECT_DIR$/hw3/hw3.js" beforeDir="false" afterPath="$PROJECT_DIR$/hw3/hw3.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hw4/hw4.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hw4/hw4.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,7 +68,8 @@
       <workItem from="1692205502552" duration="1131000" />
       <workItem from="1692619667581" duration="14094000" />
       <workItem from="1692782377555" duration="656000" />
-      <workItem from="1692787261564" duration="6236000" />
+      <workItem from="1692787261564" duration="6749000" />
+      <workItem from="1693218408004" duration="7732000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1692132910528</created>
@@ -145,7 +148,14 @@
       <option name="project" value="LOCAL" />
       <updated>1692793812843</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="hw 3 added">
+      <created>1692794188480</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1692794188480</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
