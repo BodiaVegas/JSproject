@@ -44,12 +44,10 @@ let str4 = 'Ревуть воли як ясла повні';
 let stringtoArray = str4.split(' ');
 console.log(stringtoArray);
 
-//
 // - є масив чисел [10,8,-7,55,987,-1011,0,1050,0] . за допомоги map  перетворити всі об'єкти в масиві на стрінгові.
 let arr1=[10,8,-7,55,987,-1011,0,1050,0];
 let strmaker = arr1.map(function (n) {
-    n === 'n';
-    return n;
+    return n.toString();
 })
 console.log(strmaker);
 // - створити функцію sortNums(direction), яка прймає масив чисел, та сортує його від більшого до меньшого, або навпаки в залежності від значення аргументу direction.
@@ -92,22 +90,80 @@ let sort2 = coursesAndDurationArray.filter((x) => {
 })
 console.log(sort2);
 // -- за допомоги map перетворити кожен елемент на наступний тип {id,title,monthDuration}
+function uuidv4() {
+    return ([1e7] + -1e3 + -4e3 + -8e3 + -1e11).replace(/[018]/g, c =>
+        (c ^ crypto.getRandomValues(new Uint8Array(1))[0] & 15 >> c / 4).toString(16)
+    );
+}
+
+let map = coursesAndDurationArray.map((value) => {
+    value.id = uuidv4();
+    return value
+    }
+)
+console.log(map)
 // =========================
 //     описати колоду карт (від 6 до туза без джокерів)
+
+let cards23 = [
+    {cardsuit: 'spade', value: '6', color: 'black'},
+    {cardsuit: 'spade', value: '7', color: 'black'},
+    {cardsuit: 'spade', value: '8', color: 'black'},
+    {cardsuit: 'spade', value: '9', color: 'black'},
+    {cardsuit: 'spade', value: '10', color: 'black'},
+    {cardsuit: 'spade', value: 'queen', color: 'black'},
+    {cardsuit: 'spade', value: 'jack', color: 'black'},
+    {cardsuit: 'spade', value: 'king', color: 'black'},
+    {cardsuit: 'spade', value: 'ace', color: 'black'},
+    {cardsuit: 'clubs', value: '6', color: 'black'},
+    {cardsuit: 'clubs', value: '7', color: 'black'},
+    {cardsuit: 'clubs', value: '8', color: 'black'},
+    {cardsuit: 'clubs', value: '9', color: 'black'},
+    {cardsuit: 'clubs', value: '10', color: 'black'},
+    {cardsuit: 'clubs', value: 'queen', color: 'black'},
+    {cardsuit: 'clubs', value: 'jack', color: 'black'},
+    {cardsuit: 'clubs', value: 'king', color: 'black'},
+    {cardsuit: 'clubs', value: 'ace', color: 'black'},
+    {cardsuit: 'diamond', value: '6', color: 'red'},
+    {cardsuit: 'diamond', value: '7', color: 'red'},
+    {cardsuit: 'diamond', value: '8', color: 'red'},
+    {cardsuit: 'diamond', value: '9', color: 'red'},
+    {cardsuit: 'diamond', value: '10', color: 'red'},
+    {cardsuit: 'diamond', value: 'queen', color: 'red'},
+    {cardsuit: 'diamond', value: 'jack', color: 'red'},
+    {cardsuit: 'diamond', value: 'king', color: 'red'},
+    {cardsuit: 'diamond', value: 'ace', color: 'red'},
+    {cardsuit: 'heart', value: '6', color: 'red'},
+    {cardsuit: 'heart', value: '7', color: 'red'},
+    {cardsuit: 'heart', value: '8', color: 'red'},
+    {cardsuit: 'heart', value: '9', color: 'red'},
+    {cardsuit: 'heart', value: '10', color: 'red'},
+    {cardsuit: 'heart', value: 'queen', color: 'red'},
+    {cardsuit: 'heart', value: 'jack', color: 'red'},
+    {cardsuit: 'heart', value: 'king', color: 'red'},
+    {cardsuit: 'heart', value: 'ace', color: 'red'},
+];
+
 // - знайти піковий туз
+let aceSpade = cards23.filter(x => x.cardsuit==='spade'&&x.value==='ace'&&x.color==='black');
+console.log(aceSpade);
 // - всі шістки
+let sixs= cards23.filter(x => x.value==='6')
+console.log(sixs);
 // - всі червоні карти
+let reds= cards23.filter( x => x.color==='red');
+console.log(reds);
 // - всі буби
+let diamonds = cards23.filter (x => x.cardsuit==='diamond');
+console.log(diamonds);
 // - всі трефи від 9 та більше
-//
-// {
-//     cardSuit: '', // 'spade', 'diamond','heart', 'clubs'
-//         value: '', // '6'-'10', 'ace','jack','queen','king','joker'
-//     color:'', // 'red','black'
-// }
-//
-// =========================
-//
+let clubs = cards23.filter(function(x) {
+    if (x.value<+'9' && x.cardsuit==='clubs') {
+        return x
+    }
+});
+console.log(clubs);
+
 //     Взяти описану колоду карт, та за допомоги reduce упакувати всі карти по "мастях" в об'єкт
 // {
 //     spades:[],
@@ -115,6 +171,22 @@ console.log(sort2);
 //     hearts:[],
 //     clubs:[]
 // }
+let reducer = cards23.reduce(function (accumulator, c) {
+    if (c.cardsuit==='spade') {
+        accumulator.spades.push(c);
+    }
+    if (c.cardsuit==='diamond') {
+        accumulator.diamonds.push(c);
+    }
+    if (c.cardsuit==='heart') {
+        accumulator.hearts.push(c);
+    }
+    if (c.cardsuit==='clubs') {
+        accumulator.clubs.push(c);
+    }
+    return accumulator
+}, {spades: [], diamonds: [], hearts: [], clubs: []})
+console.log(reducer);
 // =========================
 //     взяти з arrays.js (який лежить в папці 2023 plan) масив coursesArray
 // --написати пошук всіх об'єктів, в який в modules є sass

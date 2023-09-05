@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="585cc282-0bfb-4937-8a54-9dad9df45a0a" name="Changes" comment="hw 5 added">
-      <change afterPath="$PROJECT_DIR$/hw6/hw6.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hw6/hw6.js" afterDir="false" />
+    <list default="true" id="585cc282-0bfb-4937-8a54-9dad9df45a0a" name="Changes" comment="hw 6 some tasks are added">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hw6/hw6.js" beforeDir="false" afterPath="$PROJECT_DIR$/hw6/hw6.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,7 +70,9 @@
       <workItem from="1692787261564" duration="6749000" />
       <workItem from="1693218408004" duration="8671000" />
       <workItem from="1693400138393" duration="6369000" />
-      <workItem from="1693837392102" duration="5314000" />
+      <workItem from="1693837392102" duration="6265000" />
+      <workItem from="1693923475108" duration="695000" />
+      <workItem from="1693924355996" duration="5088000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1692132910528</created>
@@ -171,7 +172,14 @@
       <option name="project" value="LOCAL" />
       <updated>1693406171800</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="hw 6 some tasks are added">
+      <created>1693842914996</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1693842914996</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -198,7 +206,8 @@
     <MESSAGE value="hw 3 added" />
     <MESSAGE value="hw 4 added" />
     <MESSAGE value="hw 5 added" />
-    <option name="LAST_COMMIT_MESSAGE" value="hw 5 added" />
+    <MESSAGE value="hw 6 some tasks are added" />
+    <option name="LAST_COMMIT_MESSAGE" value="hw 6 some tasks are added" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
