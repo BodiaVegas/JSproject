@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        div {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding: 10px;
+            width: 50vw;
+            /*height: 15vh;*/
+            background:lightblue;
+            border: 1px darkblue solid;
+        }
+        button {
+            margin-top: 10px;
+            width: 40vw;
+            background: lightyellow;
+            font-size:16px;
+        }
+
+
+        .user {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding: 10px;
+            width: 90vw;
+            /*height: 15vh;*/
+            background:lightcyan;
+            border: 1px green solid;
+        }
+        h3{
+            margin: 0;
+        }
+        p{
+            font-size: 18px;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+
+
+<script>
+
+    let url = new URL(location.href);
+    console.log(url);
+    let userJSON = url.searchParams.get('value');
+    let user = JSON.parse(userJSON);
+    console.log(user);
+    let divuser = document.createElement('div');
+    divuser.classList.add('user');
+
+    let p = document.createElement('p');
+                let stringuser = JSON.stringify(user);
+                console.log(stringuser);
+                let cleanuser = stringuser
+                    .replaceAll('{','')
+                    .replaceAll('}','')
+                    .replaceAll('"','')
+                    .replaceAll(',',', ')
+                    .replaceAll(':', ': ')
+
+                p.innerText=(`${cleanuser}`);
+    let urlpost = 'https://jsonplaceholder.typicode.com/users/USER_ID/posts';
+    let urlp = urlpost.replaceAll('USER_ID',user.id);
+    console.log(urlp);
+    let button = document.createElement('button');
+    button.innerText = ('post of current user');
+    fetch(urlp)
+        .then(result2 => result2.json())
+        .then((postResponse)=> {
+            console.log(postResponse)
+            let posts = postResponse;
+            console.log(posts);
+
+            button.onclick= function () {
+                for (const post of posts) {
+                        let div1 = document.createElement('div');
+                        let posttitle = document.createElement('h3');
+                        posttitle.innerText = (`${post.id}. ${post.title} `);
+                        div1.appendChild(posttitle);
+                        let a1 = document.createElement('a');
+                        a1.innerText = ('details');
+                        a1.href = './post-details.html?value=' + JSON.stringify(post);
+                        div1.appendChild(a1);
+                        document.body.appendChild(div1);
+
+            }
+        }})
+
+
+    divuser.appendChild(p);
+    divuser.appendChild(button);
+    document.body.appendChild(divuser);
+
+
+</script>
+
+</body>
+</html>

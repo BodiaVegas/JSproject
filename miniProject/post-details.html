@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding: 10px;
+            width: 90vw;
+            /*height: 15vh;*/
+            background:aliceblue;
+            border: 1px green solid;
+        }
+        div {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding: 10px;
+            width: 50vw;
+            /*height: 15vh;*/
+            background:palegoldenrod;
+            border: 1px darkblue solid;
+            margin-bottom: 5px;
+        }
+        p{
+            font-size: 20px;
+            font-family:"Bodoni MT";
+        }
+    </style>
+</head>
+<body>
+
+<script>
+    let url2 = new URL(location.href);
+    console.log(url2);
+    let postJSON = url2.searchParams.get('value');
+    let post2 = JSON.parse(postJSON);
+    console.log(post2);
+    let div3 = document.createElement('div');
+    div3.classList.add('header');
+    let p3 = document.createElement('p');
+    let stringpost = JSON.stringify(post2);
+    console.log(stringpost);
+    let cleanpost = stringpost
+        .replaceAll('{','')
+        .replaceAll('}','')
+        .replaceAll('"','')
+        .replaceAll(',',', ')
+        .replaceAll(':', ': ')
+    let urlpost = 'https://jsonplaceholder.typicode.com/posts/POST_ID/comments';
+    let urlp = urlpost.replaceAll('POST_ID',post2.id);
+    console.log(urlp);
+    let button = document.createElement('button');
+    button.innerText = ('comments of current post');
+    fetch(urlp)
+        .then(result3 => result3.json())
+        .then((comResponse)=> {
+            console.log(comResponse)
+            let comments = comResponse;
+            console.log(comments);
+            // a.href='./post-details.html?value=' + JSON.stringify(posts);
+            button.onclick= function () {for (const comment of comments) {
+                let div1 = document.createElement('div');
+                let comtitle = document.createElement('h3');
+                comtitle.innerText=(`${comment.name}`);
+                div1.appendChild(comtitle);
+
+                document.body.appendChild(div1);
+            }
+            }})
+
+
+    p3.innerText=(`${cleanpost}`);
+    div3.appendChild(p3);
+    div3.appendChild(button);
+    document.body.appendChild(div3);
+</script>
+
+</body>
+</html>

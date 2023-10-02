@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body {
+            display: flex;
+            /*flex-direction: column;*/
+            justify-content: center;
+            align-items: center;
+        }
+        .left {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-evenly;
+            width: 48vw;
+            /*height: 15vh;*/
+            background: lightgray;
+            border: 2px black solid;
+            height: 100vh;
+        }
+        .right {
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+            justify-content: space-evenly;
+              width: 48vw;
+            height: 100vh;
+              background:lightgray;
+            border: 2px black solid;
+          }
+        div{
+            width: 25vw;
+            height: 10vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-evenly;
+            border: 1px blue solid;
+            background:lightyellow;
+        }
+        h3 {
+            margin: 0;
+        }
+
+    </style>
+</head>
+<body>
+
+<script>
+    // В index.html
+    // 1 отримати масив об'єктів з endpoint`а https://jsonplaceholder.typicode.com/users
+    // 2 Вивести id,name всіх user в index.html. Окремий блок для кожного user.
+    // 3 Додати кожному блоку кнопку/посилання , при кліку на яку відбувається перехід  на сторінку user-details.html, котра має детальну інфорацію про об'єкт на який клікнули
+fetch('https://jsonplaceholder.typicode.com/users')
+    .then(result => result.json())
+    .then((usersResponse)=> {
+        console.log(usersResponse)
+        let users = usersResponse;
+        console.log(users)
+        let div1 = document.createElement('div');
+        div1.classList.add('right');
+        let div2 = document.createElement('div');
+        div2.classList.add('left');
+        for (const user of users) {
+            if (user.id % 2 === 0) {
+                let div = document.createElement('div');
+                let idname = document.createElement('h3');
+                idname.innerText=(`${user.id}. ${user.name}`);
+                div.appendChild(idname);
+
+                let a = document.createElement('a');
+                a.innerText = ('details');
+                a.href='./user-details.html?value=' + JSON.stringify(user);
+                div.appendChild(a);
+
+                div1.appendChild(div);
+            } else {
+                let div22 = document.createElement('div');
+                let idname2 = document.createElement('h3');
+                idname2.innerText=(`${user.id}. ${user.name}`);
+                div22.appendChild(idname2);
+
+                let a2 = document.createElement('a');
+                a2.innerText = ('details');
+                a2.href='./user-details.html?value=' + JSON.stringify(user);
+                div22.appendChild(a2);
+
+                div2.appendChild(div22);
+            }
+
+        }
+        document.body.append(div2,div1)
+    })
+
+
+</script>
+
+</body>
+</html>
